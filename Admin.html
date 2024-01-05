@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Admin page</title>
+  <link rel="stylesheet" href="Admin.css">
+  <!-- Add the SweetAlert CSS link here -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1> S<span style="color: white;">T</span>S Admin</h1>
+    </div>
+  </header>
+  <main class="container">
+    <section id="captains" class="captains-table">
+      <h2>Captains</h2>
+      <input type="text" id="search-captain" class="search-input" placeholder="Search captains">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Captain rows will be added here -->
+        </tbody>
+      </table>
+      <form id="addCaptainForm">
+        <input type="text" name="captainName" placeholder="Captain Name" required>
+        <input type="email" name="captainEmail" placeholder="Captain Email" required>
+        <select name="captainStatus">
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+        <button style="width: 100px;" type="button" onclick="addCaptain()">Add Captain</button>
+      </form>
+    </section>
+    <section id="users" class="users-table">
+      <h2>Users</h2>
+      <input type="text" id="search-users" class="search-input" placeholder="Search User">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- User rows will be added here -->
+        </tbody>
+      </table>
+      <form id="addUserForm">
+        <input type="text" name="UserName" placeholder="User Name" required>
+        <input type="email" name="UserEmail" placeholder="User Email" required>
+        <select name="UserStatus">
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+        <button style="width: 100px;" type="button" onclick="addUser()">Add User</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Add the SweetAlert script link here -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="Admin.js"></script>
+</body>
+</html>

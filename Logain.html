@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <title> Login</title>
+    <meta charset="UTF-8">
+    <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="Logain.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <!-- background-->
+    <div class="main-wrapper">
+      <div class="inner-row">
+        <div class="inner-content">
+          <div class="bonute">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="car"></div>
+          <div class="wheel"></div>
+          <div class="wheel"></div>
+        </div>
+        <div class="inner-content car2">
+          <div class="bonute">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="car"></div>
+          <div class="wheel"></div>
+          <div class="wheel"></div>
+        </div>
+        <div class="line-wrapper">
+          <div class="line">
+            <span class="circle"></span>
+          </div>
+          <div class="line">
+            <span class="circle"></span>
+          </div>
+          <div class="line">
+            <span class="circle"></span>
+          </div>
+          <div class="line">
+            <span class="circle"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- background-->
+<div class="login-body">
+    <div class="container">
+      <input type="checkbox" id="flip">
+      <div class="cover">
+        <div class="front">
+          <img src="img/photo_2024-01-05_22-33-06.jpg "alt="">
+          <div id="text" class="text">
+            <span class="text-1" style="color: white;">welcome back <br> </span>
+            <span class="text-2" style="color: white;">Let's Go</span>
+          </div>
+        </div>
+        <div class="back">
+          
+          <div class="text">
+            <span class="text-1">Complete miles of journey <br> with one step</span>
+            <span class="text-2">Let's get started</span>
+          </div>
+        </div>
+      </div>
+      <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+            <form action="#">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input id="Email" type="text" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                  <i id="iconlock" class="fas fa-eye" ></i>
+                  <input id="password" type="password" placeholder="Enter your password" required>
+                </div>
+                <input id="s" type="checkbox">
+                <label id="l" for="s">remember me</label>
+                <div class="button input-box">
+                  <input id="Logain"  type="submit" value="Login">
+                </div>
+                <div class="text sign-up-text">Don't have an account? <label for="flip" style="color:crimson">Signup now</label></div>
+              </div>
+            </form>
+          </div>
+          <div class="signup-form">
+            <div id="Signup" class="title" >Signup</div>
+            <form action="#">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-user"></i>
+                  <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input id="Email2" type="email" placeholder="Enter your email" required>
+                </div>
+                <div  class="input-box">
+                  <i id="iconlock2" class="fas fa-eye" ></i>
+                  <input id="password2" type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="button input-box">
+                  <input id="Register" type="submit" value="Register">
+                </div>
+                <div class="text sign-up-text">Already have an account? <label for="flip" style="color: crimson">Login now</label></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="Logain.js"></script>
+  </body>
+  </html>
+  

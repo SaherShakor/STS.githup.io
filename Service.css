@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #555;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #777;
+}
+
+/* تعديلات في هيكل الصفحة */
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* تقسيم الشاشة إلى نصفين */
+  align-items: center;
+  gap: 20px; /* المسافة بين العناصر */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#forminput {
+  width: 100%;
+  max-width: 400px;
+  margin: auto; /* للتأكد من توسيط النموذج في حالة أقل من العرض المتاح */
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#start-btn {
+  width: 100%;
+  background-color: crimson;
+  color: #fff;
+  padding: 7px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#share_location{
+  margin-top: 3px;
+  padding: 0px; width: 10%;
+  background-color: crimson;
+  color: whitesmoke;
+  border-radius: 4px;
+  border: none;
+
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#map {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 500px;
+  margin-top: 20px; /* توسيع المسافة بين النموذج والخريطة */
+}
+
+#position_price {
+  margin-top: 40px;
+  text-align: center; /* لتوسيع التوسيط في حالة الشاشات الصغيرة */
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  #container {
+    grid-template-columns: 1fr; /* تحتفظ بنمط العرض لنصف الشاشة فقط عندما تكون الشاشة أصغر من 768 بكسل */
+  }
+
+  #map {
+    margin-top: 10px; /* توسيع المسافة بين النموذج والخريطة في حالة الشاشات الصغيرة */
+  }
+}
+#card {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card-section {
+  margin: 3px;
+  width: 40%;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+#price {
+  font-size: 24px;
+  color: #333;
+}
+
+#distance {
+  
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+
+/* تعديل تنسيق البطاقة في حالة الشاشات الصغيرة */
+@media (max-width: 768px) {
+  #card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+#priceResult{
+  background-color: crimson;
+  
+}
+#distanceResult{
+  text-align: center;
+  background-color: crimson;
+
+}
+#timerResult{
+  background-color: crimson;
+}

@@ -1,0 +1,540 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+/* Body Styles */
+body {
+  background-color: black;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-animation-name: bg-ani;
+  -webkit-animation-duration: 7s;
+  animation-name: bg-ani;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+
+/* Login Styles */
+.container {
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  background: white;
+  padding: 40px 30px;
+  box-shadow: 0 0px 10px 10px rgba(255, 255, 255, 0.1);
+  perspective: 2700px;
+}
+
+.container .cover {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+}
+
+.container #flip:checked ~ .cover {
+  transform: rotateY(-180deg);
+}
+
+.container .cover .front,
+.container .cover .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.cover .back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.container .cover::before,
+.container .cover::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #333;
+  opacity: 0.2;
+  z-index: 12;
+}
+
+.container .cover::after {
+  opacity: 0;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.container .cover img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+
+.container .cover .text {
+  position: absolute;
+  z-index: 130;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover .text .text-1,
+.cover .text .text-2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+.cover .text .text-2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.container .forms {
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+
+.container .form-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-content .login-form,
+.form-content .signup-form {
+  width: calc(100% / 2 - 25px);
+}
+
+.forms .form-content .title {
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.forms .form-content .title:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: #333;
+}
+
+.forms .signup-form .title:before {
+  width: 20px;
+}
+
+.forms .form-content .input-boxes {
+  margin-top: 30px;
+}
+
+.forms .form-content .input-box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+
+.form-content .input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.form-content .input-box input:focus,
+.form-content .input-box input:valid {
+  border-color: black;
+}
+
+.form-content .input-box i {
+  position: absolute;
+  color: black;
+  font-size: 17px;
+}
+
+.forms .form-content .text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.forms .form-content .text a {
+  text-decoration: none;
+}
+
+.forms .form-content .text a:hover {
+  text-decoration: underline;
+}
+
+.forms .form-content .button {
+  color: white;
+  margin-top: 40px;
+}
+
+.forms .form-content .button input {
+  color: white;
+  background: #333;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.forms .form-content .button input:hover {
+  background: rgba(0, 0, 0, 0.4);
+  color: black;
+  box-shadow: 0px 0px 40px 10px whitesmoke;
+}
+
+.forms .form-content label {
+  color: #5b13b9;
+  cursor: pointer;
+}
+
+.forms .form-content label:hover {
+  text-decoration: underline;
+}
+
+.forms .form-content .login-text,
+.forms .form-content .sign-up-text {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.container #flip {
+  display: none;
+}
+
+/* Links and Colors */
+a {
+  color: #333;
+}
+
+#s,
+#l {
+  color: #333;
+  text-decoration: none;
+}
+
+#l:checked {
+  color: #333;
+}
+
+#l:checked + label::before {
+  background-color: green;
+  color: #333;
+}
+
+#l+label::before {
+  color: #333;
+}
+
+/* Login Body Styles */
+.login-body {
+  position: absolute;
+  width: 800px;
+}
+
+/* Background Animation Styles */
+* {
+  box-sizing: border-box;
+}
+
+.main-wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 15px;
+  position: relative;
+  height: 100vh;
+}
+
+.inner-content {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  -webkit-animation-name: example;
+  -webkit-animation-duration: 12s;
+  animation-name: example;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+
+.wheel {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
+  margin: 0 auto;
+  border: 3px solid #1b1a1a;
+  position: relative;
+  top: -7px;
+  -webkit-animation-name: wheel-ani;
+  animation-name: wheel-ani;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+.wheel::before,
+.wheel::after {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background-color: red;
+  display: inline-block;
+  position: absolute;
+  left: 2px;
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+  top: 1px;
+}
+
+.wheel::after {
+  content: "";
+  transform: rotate(-45deg);
+  top: 12px;
+}
+
+.car {
+  background-color: crimson;
+  height: 15px;
+  display: block;
+  width: 70px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.car::before {
+  background-color: gray;
+  content: "";
+  width: 10px;
+  height: 2px;
+  display: inline-block;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+
+.bonute {
+  height: 16px;
+  background-color: gray;
+  width: 40px;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 3px;
+  justify-content: space-between;
+}
+
+.bonute span {
+  width: 18px;
+  display: inline-block;
+  background-color: #f6d8af;
+}
+
+.inner-content.car2 {
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  margin-left: 0;
+  margin-left: auto;
+  animation-direction: alternate;
+}
+
+@keyframes example {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(-250px);
+  }
+}
+
+.line-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.line {
+  height: 100%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  left: -4px;
+  margin: 0 auto;
+  background-color: gray;
+  border-radius: 50%;
+  -webkit-animation-name: circle-ani;
+  -webkit-animation-duration: 12s;
+  animation-name: circle-ani;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+
+.line:nth-child(2) .circle {
+  -webkit-animation-duration: 16s;
+  animation-duration: 16s;
+}
+
+.line:nth-child(3) .circle {
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+}
+
+.line:nth-child(4) .circle {
+  -webkit-animation-duration: 23s;
+  animation-duration: 23s;
+}
+
+@keyframes circle-ani {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100vh;
+  }
+}
+
+@keyframes wheel-ani {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 730px) {
+  .container .cover {
+    display: none;
+  }
+  .form-content .login-form,
+  .form-content .signup-form {
+    width: 100%;
+  }
+  .form-content .signup-form {
+    display: none;
+  }
+  .container #flip:checked ~ .forms .signup-form {
+    display: block;
+  }
+  .container #flip:checked ~ .forms .login-form {
+    display: none;
+  }
+}
+.container .cover .text {
+  position: absolute;
+  z-index: 130;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.container .cover .text-1,
+.container .cover .text-2 {
+  transform-origin: left; /* تجاوز تأثير القلب على النص */
+}
+
+.container #flip:checked ~ .cover .text {
+  opacity: 0;
+}

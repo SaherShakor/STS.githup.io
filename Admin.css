@@ -1,0 +1,120 @@
+body {
+  font-family: "Poppins" , sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: white;
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Add padding to the container */
+}
+
+header {
+  background-color: #333;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  color: crimson;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+.active {
+  background-color: #ccc;
+}
+
+.delete {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#search-users {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+/* تنسيقات إضافية لجعل الصفحة تبدو أكثر حداثة */
+
+.header-logo {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.header-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.captains-table {
+  margin-top: 20px;
+}
+
+.users-table {
+  margin-top: 20px;
+}
+
+.search-input {
+  border-radius: 5px;
+}
+
+.delete-button {
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+td{
+  text-align: center;
+}
+#search-users, #search-captain {
+  width: calc(100% - 10px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* تأكد من أن عرض حقل البحث يتناسب مع عرض الجدول */
+.users-table table, .captains-table table {
+  width: 100%;
+}
+tr:hover{
+  background-color: silver;
+  color: black;
+}
